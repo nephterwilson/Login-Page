@@ -3,28 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Welcome</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="login-container">
-        <form id="login-form">
-            <img src="logo.png" alt="Logo" class="logo">
-            <h1>Login</h1>
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="submit">Get Started</button>
-        </form>
+    <!-- Header and Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="home.html">
+                    <img src="./asset/logo.png" alt="Logo" class="logo" width="150">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Banner Section -->
+        <section class="banner-section text-center py-5 bg-primary text-white">
+            <div class="container">
+                <h1 class="display-3">Welcome to Our Website</h1>
+                <p class="lead">Discover the best services and courses.</p>
+                <a href="services.html" class="btn btn-light btn-lg">Get Started</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="hero" class="container py-5">
+            <div class="row align-items-center">
+                <!-- Content Column -->
+                <div class="col-md-6">
+                    <h1 class="display-4">Our Services</h1>
+                    <p class="lead">We offer a range of services designed to help you achieve your goals. Whether you're building a website, improving your SEO, or creating engaging content, we have the expertise to help you succeed.</p>
+                </div>
+        
+                <!-- Image Column -->
+                <div class="col-md-6">
+                    <img src="./asset/Michesi Hill Phalombe.jpg" alt="Michesi Hill in Phalombe" class="img-fluid">
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+       <!-- Footer -->
+<footer class="bg-dark text-light py-4 mt-5">
+    <div class="container text-center">
+        <p>&copy; 2024  Your website. All rights reserved.</p>
     </div>
-    <script src="script.js"></script>
-    <script>
-        // Simple login simulation
-        document.getElementById('login-form').addEventListener('submit', (event) => {
-            event.preventDefault(); // Prevent form submission
-            // Simulate successful login
-            localStorage.setItem('loggedIn', 'true'); // Set login state
-            window.location.href = 'home.html'; // Redirect to the home page
-        });
-    </script>
+</footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
